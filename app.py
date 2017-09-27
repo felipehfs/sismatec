@@ -72,10 +72,9 @@ def main():
 		print("Digite 0 para sair")
 		try:
 			user_choice = int(input("-%>:  "))
-			if not user_choice in features:
-				if user_choice == 0:
-					break
-					os.system("clear")
+			if user_choice == 0:
+				break
+				os.system("clear")
 				print("Opção inválida!!")
 			features[user_choice]()
 		except:
