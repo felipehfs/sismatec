@@ -32,13 +32,13 @@ class ContactDAO(object):
         row = self.cursor.fetchone()
         if row is None:
             return row
-        return Contact(row[0], row[1], row[2], row[3])
+        return Contact(*row)
     
     def read(self):
         self.cursor.execute("SELECT name, email, birthday, code FROM contacts")
         contatos = []
         for row in self.cursor.fetchall():
-            contatos.append(Contact(row[0], row[1], row[2], row[3]))
+            contatos.append(Contact(*row))
         return contatos
 
     def remove(self, code):
