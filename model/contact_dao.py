@@ -33,8 +33,8 @@ class ContactDAO(object):
         self.cursor.execute(
             "SELECT name, email, birthday, code FROM contacts WHERE code=?", (code,))
         row = self.cursor.fetchone()
-        if row is None:
-            return row
+        if  not row:
+            return None
         return Contact(*row)
 
     def read(self):
