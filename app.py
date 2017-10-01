@@ -74,8 +74,15 @@ def main():
     os.system('clear')
     user_choice = 1
     while user_choice != 0:
-        features = {1: create_contact, 2: list_contacts,
-                    3: remove_contact, 4: find_contact, 5: update_contact, 6:exportar, 42: clear}
+        features = {
+                    1: create_contact, 
+                    2: list_contacts,
+                    3: remove_contact,
+                    4: find_contact,
+                    5: update_contact,
+                    6:exportar,
+                    42: clear
+        }
         print("Digite 1 para cadastrar contato")
         print("Digite 2 para listar contato")
         print("Digite 3 para remover contato")
