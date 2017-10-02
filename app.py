@@ -1,6 +1,9 @@
 #-*- coding:utf-8 -*-
 import os
 import sys
+import time
+
+from beautifultable import BeautifulTable
 
 from model.database import create_connection
 from model.contact_dao import ContactDAO
@@ -70,7 +73,11 @@ def main():
     print("                 Agenda   			     ")
     print("==================================================")
     print("   This program is writted by Felipe Henrique\n")
+    time.sleep(1)
+    print(" And helped by Cassio Botaro")
     input("\nPress Enter:")
+    os.system('clear')
+   
     os.system('clear')
     user_choice = 1
     while user_choice != 0:

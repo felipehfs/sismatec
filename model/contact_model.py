@@ -1,3 +1,5 @@
+import datetime
+
 class Contact(object):
     """
     Contact entity class
